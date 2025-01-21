@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Marry Me?</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Georgia', serif;
+            background: radial-gradient(circle, #ff9a9e, #fad0c4, #fbc2eb);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 4rem;
+            margin: 0;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+        }
+
+        p {
+            font-size: 2rem;
+          button {
+            margin-top: 3rem;
+            padding: 1rem 2rem;
+            font-size: 1.5rem;
+            background-color: #ff6b81;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes countdownAnim {
+            0% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { opacity: 0; }
+        }  margin-top: 1.5rem;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .countdown {
+            font-size: 3rem;
+            margin-top: 2rem;
+            font-weight: bold;
+            animation: fadeIn 2s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Will You Marry Me, Rouamissae Houmymid?</h1>
+        <p>You are my today, my tomorrow, and my forever w Kulshi 
+            Kanbghik bzf Nouni.</p>
+
+        <div class="countdown" id="countdown"></div>
+
+        <a href="hgdnxbv.html"><button class="button">Say Yes ❤️</button></a>
+    </div>
+
+    <script>
+        let countdown = 10;
+        const countdownElement = document.getElementById('countdown');
+
+        const interval = setInterval(() => {
+            countdownElement.textContent = `Countdown: ${countdown}...`;
+            countdown--;
+
+            if (countdown < 0) {
+                clearInterval(interval);
+                countdownElement.textContent = "Will you marry me?";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
